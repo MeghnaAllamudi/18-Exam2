@@ -2,7 +2,7 @@
 Exam 2, problem 2.
 
 Authors: Dave Fisher, David Mutchler, Matt Boutell, their colleagues,
-         and PUT_YOUR_NAME_HERE.  October 2018.
+         and MeghnaAllamudi.  October 2018.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import math
@@ -110,7 +110,7 @@ def main():
     print(' to run the testing code as you complete the TODOs.')
 
     # run_test_problem2a()
-    # run_test_problem2b()
+    run_test_problem2b()
 
 
 def run_test_problem2a():
@@ -195,6 +195,12 @@ def problem2a(triangle):
       :type triangle: Triangle
       :rtype: Triangle
     """
+    s1 = 2 * triangle.a
+    s2 = 2 * triangle.b
+    s3 = 2 * triangle.c
+
+    return Triangle(s1,s2,s3)
+
     # -------------------------------------------------------------------------
     # TODO: 2. Implement and test this function.
     #          Tests have been written for you (above).
@@ -353,6 +359,11 @@ def problem2b(triangles):
       :type triangles: list | tuple of Triangle
       :rtype: int | float
     """
+    area = 0
+    for k in range(len(triangles)):
+        t = triangles[k]
+        area = area + t.get_area()
+    return area
     # -------------------------------------------------------------------------
     # TODO: 3. Implement and test this function.
     #          Tests have been written for you (above).
